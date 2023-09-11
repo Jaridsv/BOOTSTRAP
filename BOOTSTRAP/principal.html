@@ -1,0 +1,187 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylo.css">
+
+  </head>
+  <body>
+      <div class="container mt-3">
+        <div class="card">
+            <div class="card-header card-header-custom">
+                <h2 class="fs-4 text-black">Detalles del Producto</h2>
+            </div>
+            <div class="card-body">
+
+
+
+
+                
+                <ul class="nav nav-tabs" id="myTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="producto-tab" data-bs-toggle="tab" href="#producto-tab-content"
+                            role="tab" aria-controls="producto-tab-content" aria-selected="true">Producto</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="subir-imagen-tab" data-bs-toggle="tab" href="#subir-imagen"
+                            role="tab" aria-controls="subir-imagen" aria-selected="false">Subir Imagen</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabsContent">
+                    <div class="tab-pane fade show active" id="producto-tab-content" role="tabpanel"
+                        aria-labelledby="producto-tab">
+                        <form>
+     
+
+
+
+
+                            <div class="row">
+                              <div class="form-group col-md-3">
+                                    <label for="itemDetailsItemNumber">N Producto<span
+                                            class="requiredIcon">*</span></label>
+                                    <input type="text" class="form-control" name="itemDetailsItemNumber"
+                                        id="itemDetailsItemNumber" autocomplete="off">
+                                    <div id="itemDetailsItemNumberSuggestionsDiv"
+                                        class="customListDivWidth"></div>
+                                </div>
+                     
+
+
+
+
+                                <div class="form-group col-md-3">
+                                    <label for="itemDetailsProductID">ID Producto</label>
+                                    <input class="form-control invTooltip" type="number" readonly
+                                        id="itemDetailsProductID" name="itemDetailsProductID"
+                                        title="Este ID de producto será generado automáticamente">
+                                </div>
+                            </div>
+                    
+
+
+
+
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="itemDetailsItemName">Nombre de Producto<span
+                                            class="requiredIcon">*</span></label>
+                                    <input type="text" class="form-control" name="itemDetailsItemName"
+                                        id="itemDetailsItemName" autocomplete="off">
+                                    <div id="itemDetailsItemNameSuggestionsDiv"
+                                        class="customListDivWidth"></div>
+                                </div>
+                            
+
+
+
+                                <div class="form-group col-md-2">
+                                    <label for="itemDetailsStatus">Estado</label>
+                                    <select id="itemDetailsStatus" name="itemDetailsStatus"
+                                        class="form-control chosenSelect">
+                                        <option value="Active">Activo</option>
+                                        <option value="Disabled">Inactivo</option>
+                                    </select>
+                                </div>
+                            </div>
+                  
+
+
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="itemDetailsDescription">Descripción</label>
+                                    <textarea rows="3" class="form-control" placeholder="Descripción"
+                                        name="itemDetailsDescription" id="itemDetailsDescription"></textarea>
+                                </div>
+                            </div>
+                   
+
+
+                            <div class="row">
+                                <div class="form-group col-md-3">
+                                    <label for="itemDetailsDiscount">Descuento %</label>
+                                    <input type="text" class="form-control" value="0" name="itemDetailsDiscount"
+                                        id="itemDetailsDiscount">
+                                </div>
+                             
+
+
+                                <div class="form-group col-md-3">
+                                    <label for="itemDetailsQuantity">Cantidad<span
+                                            class="requiredIcon">*</span></label>
+                                    <input type="number" class="form-control" value="0" name="itemDetailsQuantity"
+                                        id="itemDetailsQuantity">
+                                </div>
+                              
+
+
+
+
+                                <div class="form-group col-md-3">
+                                    <label for="itemDetailsUnitPrice">Precio Unitario<span
+                                            class="requiredIcon">*</span></label>
+                                    <input type="text" class="form-control" value="0" name="itemDetailsUnitPrice"
+                                        id="itemDetailsUnitPrice">
+                                </div>
+
+                                
+
+                                <div class="form-group col-md-3">
+                                    <label for="itemDetailsTotalStock">Stock Total</label>
+                                    <input type="text" class="form-control" name="itemDetailsTotalStock"
+                                        id="itemDetailsTotalStock" readonly>
+                                </div>
+                              
+
+
+                                <div class="form-group col-md-4">
+                                    <div id="imageContainer"></div>
+                                </div>
+                            </div>
+                            <br>
+                         
+
+
+
+                            <div class="row">
+                                <div class="form-group col-md-10">
+                                    <button type="button" id="addItem" class="btn btn-success">Agregar Producto</button>
+                                    <button type="button" id="updateItemDetailsButton" class="btn btn-primary">Actualizar</button>
+                                    <button type="button" id="deleteItem" class="btn btn-danger">Borrar</button>
+                                    <button type="reset" class="btn btn-light" id="itemClear">Limpiar</button>
+
+                                </div>
+                            </div>
+                        </form>
+                        
+                        
+                    </div>
+                    <div class="tab-pane fade" id="subir-imagen" role="tabpanel" aria-labelledby="subir-imagen-tab">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </div>
+    
+
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  -->
+  </body>
+</html>
